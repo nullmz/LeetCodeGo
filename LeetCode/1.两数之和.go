@@ -20,7 +20,7 @@
 func twoSum(nums []int, target int) []int {
 	m := make(map[int]int)
 	for index, val := range nums {
-		if preIndex, ok := m[target-val]; ok {
+		if preIndex, ok := m[target-val]; ok {	// preIndex返回map中的值，ok返回是否存在键
 			return []int{preIndex, index}
 		} else {
 			m[val] = index
